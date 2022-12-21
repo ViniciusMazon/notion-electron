@@ -1,0 +1,26 @@
+{
+  "name": "notion-electron",
+  "version": "1.0.0",
+  "description": "A simple notion app in electron",
+  "main": "./src/background.js",
+  "scripts": {
+    "start": "electron ./src/background.js",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.mazon.notion",
+    "linux": {
+      "icon": "./assets/icons/512x512.png",
+      "target": [ "deb", "appimage" ]
+    }
+  },
+  "keywords": [],
+  "author": "ViniciusMazon <vnpmazon@gmail.com> (http://github.com/viniciusmazon)",
+  "homepage": "https://www.github.com/ViniciusMazon/notion-electron",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^19.0.7",
+    "electron-builder": "^23.1.0"
+  }
+}
